@@ -1,0 +1,247 @@
+
+.bigpage{
+  @apply h-full w-full;
+  font-family: 'Quicksand', sans-serif;
+  .header{
+    @apply h-16 w-full flex flex-row justify-between items-center px-5 border-b-2;
+    .sidenav{
+      @apply block lg:hidden
+    }
+    .logo{
+      @apply hidden md:flex flex-row justify-center items-center;
+      .imglogo{
+
+      }
+      .slogan{
+        @apply font-bold pl-3;
+        font-size: 16px;
+        letter-spacing: 2px;
+
+      }
+    }
+    .search{
+      @apply justify-between items-center lg:w-2/5 md:w-full;
+      text-align: center;
+      .icon{
+        transform: translateX(30px);
+      }
+      .searchip{
+        @apply w-full text-base border-2 rounded-full w-1/2;
+        padding: 8px 30px;
+      }
+
+    }
+    .usergroup{
+      @apply flex flex-row justify-between items-center;
+      .usertext{
+        @apply hidden lg:block;
+        font-size: 16px;
+        padding: 0 10px 0 10px;
+      }
+      .icon-user-group{
+        @apply text-xl px-3 rounded-full text-gray-500;
+      }
+      .menu{
+        color: white;
+        width: 182px;
+        height: 355px;
+        .user-info{
+
+        }
+        .items{
+          width:200px;
+        }
+      }
+      .noticon:hover{
+        color: #f13f5f;
+        cursor: pointer;
+        animation:anima ease-in 0.1s;
+      }
+    }
+  }
+  .body{
+    .navleft{
+      @apply h-screen fixed;
+      color: rgb(64,64,64);
+      width: 8%;
+      .listicon{
+        @apply flex flex-col justify-between items-center;
+        .elemon{
+          @apply flex flex-col justify-center items-center p-3 w-full;
+        }
+        .elemon:hover{
+          @apply cursor-pointer bg-black text-white rounded-xl w-2/3;
+        }
+      }
+    }
+    .right-content{
+      @apply float-right h-screen;
+      @media only screen and (min-width: 768px) {
+        width: 92%;
+      }
+
+      .slider {
+        @apply text-white mt-12 lg:mt-2 relative;
+        .wrap-img {
+          @apply lg:flex xl:gap-40 justify-between w-full rounded-2xl  px-6 lg:px-10 lg:gap-20;
+          .slider-left {
+            @apply px-6 xl:w-3/5 mb-12 lg:w-5/6;
+            .slider-title {
+              @apply xl:text-4xl font-bold mb-4 mt-12 pt-4 lg:text-2xl;
+            }
+            .slider-description {
+              @apply xl:text-lg font-light mb-4 lg:text-base;
+            }
+            .btn {
+              @apply rounded-full border-2 border-white py-2 px-4 mb-4;
+              transition: all .2s linear;
+              &:hover {
+                @apply text-orange-500 bg-white;
+
+              }
+            }
+          }
+          .slider-right {
+            @apply hidden lg:block lg:flex items-center;
+            .slider-img {
+              @apply  md:h-2/3 xl:h-full;
+            }
+          }
+        }
+        .arrow {
+          @apply absolute top-1/2 text-4xl shadow-2xl bg-white text-black w-10  h-10 rounded-full
+          flex justify-center items-center border cursor-pointer hidden md:flex z-10;
+          transform: translateY(-50%);
+          .icon {
+            @apply text-base;
+          }
+        }
+        .arrow-left {
+          @apply -left-3;
+        }
+        .arrow-right {
+          @apply -right-3;
+        }
+      }
+
+      /*.animation{
+        @apply flex flex-row justify-between w-full  rounded-2xl;
+        height: 270px;
+        margin-top: 20px;
+        background: linear-gradient(to right, rgb(254, 33, 94), rgb(255, 148, 2));
+        .left-slide{
+          @apply flex-1 p-10;
+          .span-title{
+            @apply text-3xl text-white font-bold;
+
+          }
+          .span-title-lv2{
+            @apply text-xl py-1 lg:py-5  text-white;
+
+          }
+          .btn-registration{
+            @apply px-4 py-2 rounded-full text-base font-semibold text-white;
+            background-color: rgba(0,0,0,0);
+            border: 2px solid white;
+          }
+          .btn-registration:hover{
+            color: #f13f5f;
+            background-color: white;
+          }
+        }
+        .right-slide{
+          @apply flex-1 w-full hidden lg:block;
+
+        }
+      }*/
+
+      .courses{
+        @apply mb-12 ;
+        .fullstack{
+          @apply py-5 flex flex-row justify-between items-center;
+          .title{
+
+          }
+          .new{
+
+          }
+        }
+        .groupcourseresponsive{
+          @apply md:hidden;
+        }
+        .groupcourse{
+          @apply grid grid-cols-4 gap-5 hidden md:grid;
+          .itemscourse{
+            @apply cursor-pointer overflow-hidden ;
+            .imgcourse{
+              @apply rounded-2xl
+            }
+            .textlearn{
+              @apply rounded-2xl hidden flex justify-center items-center;
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+            }
+            /*.relative:hover .textlearn{
+              @apply flex;
+              background-color: rgba(182, 182, 182, 0.77);
+            }*/
+
+            .titlecourse{
+              @apply text-xl font-semibold mt-2;
+            }
+            .userquantity{
+
+            }
+          }
+        }
+        .watchmore:hover{
+          animation: anima ease-in 0.1s;
+          cursor: pointer;
+        }
+      }
+      .footer{
+        @apply text-white sticky p-10 rounded-2xl;
+        @media only screen and (min-width: 768px) {
+          margin-left: -122px;
+        }
+        background-color: rgb(24,24,33);
+        .about{
+          @apply pb-8 lg:px-16;
+          .items-about{
+            .title-about{
+              @apply flex flex-row  items-center py-3;
+              .info-about{
+
+              }
+            }
+          }
+        }
+        .infosocial{
+          @apply lg:flex flex-row justify-between items-center;
+          .copyright{
+            @apply opacity-20;
+          }
+          .social{
+            .socialicon{
+              @apply text-2xl px-3;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+@keyframes anima {
+  from{
+    transform: translateX(0px);
+  }
+  to{
+    transform: translateX(8px);
+  }
+}

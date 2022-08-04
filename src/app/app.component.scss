@@ -1,0 +1,125 @@
+.animation{
+  @apply flex flex-row justify-between w-full  rounded-2xl;
+  height: 270px;
+  margin-top: 20px;
+  background: linear-gradient(to right, rgb(254, 33, 94), rgb(255, 148, 2));
+  .left-slide{
+    @apply flex-1 p-10;
+    .span-title{
+      @apply text-3xl text-white font-bold;
+
+    }
+    .span-title-lv2{
+      @apply text-xl py-1 lg:py-5  text-white;
+
+    }
+    .btn-registration{
+      @apply px-4 py-2 rounded-full text-base font-semibold text-white;
+      background-color: rgba(0,0,0,0);
+      border: 2px solid white;
+    }
+    .btn-registration:hover{
+      color: #f13f5f;
+      background-color: white;
+    }
+  }
+  .right-slide{
+    @apply flex-1 w-full hidden lg:block;
+
+  }
+}
+
+.animation2{
+  @apply flex flex-row justify-between w-full  rounded-2xl;
+  height: 270px;
+  margin-top: 20px;
+  background: linear-gradient(to right, rgb(40, 119, 250), rgb(103, 23, 205));
+  .left-slide{
+    @apply flex-1 p-10;
+    .span-title{
+      @apply text-3xl text-white font-bold;
+
+    }
+    .span-title-lv2{
+      @apply text-xl py-1 lg:py-5  text-white;
+
+    }
+    .btn-registration{
+      @apply px-4 py-2 rounded-full text-base font-semibold text-white;
+      background-color: rgba(0,0,0,0);
+      border: 2px solid white;
+    }
+    .btn-registration:hover{
+      color: #f13f5f;
+      background-color: white;
+    }
+  }
+  .right-slide{
+    @apply flex-1 w-full hidden lg:block;
+
+  }
+}
+.animation3{
+  @apply flex flex-row justify-between w-full  rounded-2xl;
+  height: 270px;
+  margin-top: 20px;
+  background: linear-gradient(to right, rgb(103, 23, 205), rgb(40, 119, 250));
+  .left-slide{
+    @apply flex-1 p-10;
+    .span-title{
+      @apply text-3xl text-white font-bold;
+
+    }
+    .span-title-lv2{
+      @apply text-xl py-1 lg:py-5  text-white;
+
+    }
+    .btn-registration{
+      @apply px-4 py-2 rounded-full text-base font-semibold text-white;
+      background-color: rgba(0,0,0,0);
+      border: 2px solid white;
+    }
+    .btn-registration:hover{
+      color: #f13f5f;
+      background-color: white;
+    }
+  }
+  .right-slide{
+    @apply flex-1 w-full hidden lg:block;
+
+  }
+}
+.animation4{
+  @apply flex flex-row justify-between w-full  rounded-2xl;
+  height: 270px;
+  margin-top: 20px;
+  background: linear-gradient(to right, rgb(0, 126, 254), rgb(6, 195, 254));
+  .left-slide{
+    @apply flex-1 p-10;
+    .span-title{
+      @apply text-3xl text-white font-bold;
+
+    }
+    .span-title-lv2{
+      @apply text-xl py-1 lg:py-5  text-white;
+
+    }
+    .btn-registration{
+      @apply px-4 py-2 rounded-full text-base font-semibold text-white;
+      background-color: rgba(0,0,0,0);
+      border: 2px solid white;
+    }
+    .btn-registration:hover{
+      color: #f13f5f;
+      background-color: white;
+    }
+  }
+  .right-slide{
+    @apply flex-1 w-full hidden lg:block;
+
+  }
+}
+swiper {
+  height: 300px;
+  width: 400px;
+}

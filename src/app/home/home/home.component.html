@@ -1,0 +1,179 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<div class="bigpage">
+  <div class="header grid grid-cols-3">
+    <div class="logo">
+      <img class="imglogo w-10  md:block" src="/assets/img/logo.png" alt="logo">
+      <span class="slogan ">Học Lập Trình Để Đi Làm</span>
+    </div>
+    <i (click)="menu.toggle()" class="fa-solid fa-bars text-xl sidenav"></i>
+    <div class="search">
+      <i class="icon fa-solid fa-magnifying-glass"></i>
+      <input type="text" class="searchip" placeholder="Tìm kiếm khoá học">
+    </div>
+    <div class="usergroup">
+      <span class="usertext ">Khóa học của tôi</span>
+      <i class="noticon icon-user-group fa-solid fa-bell"></i>
+
+      <img (click)="menu.toggle()"  class="relative hidden md:block w-10 h-10 rounded-full" src="/assets/img/lockscreen.jpg" alt="">
+      <mat-sidenav #menu [opened] = "opened" class="p-5 rounded-2xl absolute top-20 right-5 menu w-full" style="width: 300px;background: linear-gradient(to right,rgb(0,0,0),#cacbcb)">
+        <div class="info-user flex flex-row justify-center items-center">
+          <img class="w-10 rounded-full h-10" src="assets/img/lockscreen.jpg" alt="">
+          <span class="text-xl ml-5">Pham Viet Tam</span>
+        </div>
+        <ul class="flex flex-col justify-center items-start">
+          <li class="items-user text-base py-3 w-full border-b-2">Trang cá nhân</li>
+          <li class="items-user text-base py-3 w-full border-b-2">Viết blog</li>
+          <li class="items-user text-base py-3 w-full border-b-2">Bài viết của tôi</li>
+          <li class="items-user text-base py-3 w-full border-b-2">Bài viết đã lưu</li>
+          <li class="items-user text-base py-3 w-full border-b-2">Cài đặt</li>
+          <li class="items-user text-base py-3 w-full border-b-2"><a [routerLink]="['']" routerLinkActive="$router_link-active$">Đăng xuất</a></li>
+        </ul>
+      </mat-sidenav>
+    </div>
+  </div>
+  <div class="body">
+    <div class="navleft hidden md:block">
+      <ul class="listicon">
+        <li class="elemon">
+          <span class="px-4 items-center py-2 text-white text-xl bg-blue-600 rounded-full">+</span>
+        </li>
+        <li class="elemon">
+          <i class="text-xl fa-solid fa-house"></i>
+          <span class="">Home</span>
+        </li>
+        <li class="elemon">
+          <i class="text-xl fa-solid fa-road"></i>
+          <span class="">Lộ trình</span>
+        </li>
+        <li class="elemon">
+          <i class="text-xl fa-solid fa-book-bookmark"></i>
+          <span class="">Học</span>
+        </li>
+        <li class="elemon">
+          <i class="text-xl fa-solid fa-cubes-stacked"></i>
+          <span class="">Blog</span>
+        </li>
+
+      </ul>
+    </div>
+    <div class="right-content w-full">
+
+
+      <div class="slider" >
+        <div class="arrow arrow-left">
+          <i class="fa-solid fa-angle-left icon"></i>
+        </div>
+        <swiper [config]="config" >
+          <div class="swiper-wrapper" >
+            <div class="swiper-slide wrap-img" *ngFor= "let img of listImg; let i = index" style="{{img.style}}">
+              <div class="slider-left">
+                <h1 class="slider-title">{{img.title}}</h1>
+                <p class="slider-description">{{img.description}}</p>
+                <button class="btn">{{img.titleButton}}</button>
+              </div>
+              <div class="slider-right">
+                <img src="{{img.urlImg}}" alt="" class="slider-img">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </swiper>
+        <div class=" arrow arrow-right">
+          <i class="fa-solid fa-angle-right icon"></i>
+        </div>
+      </div>
+
+      <!--fe-->
+      <div class="list-combinedcourse">
+        <div class="courses" *ngFor="let combinedcourse of listCombinedCourse">
+          <div class="fullstack " >
+            <div class="title">
+              <span class="nametitle text-3xl font-semibold ">{{combinedcourse.title}}</span>
+              <span class="new ml-3 bg-blue-600 text-white rounded ">New</span>
+            </div>
+            <span class="watchmore text-orange-600 text-xl">Xem chi tiết <i class="move fa-solid fa-arrows-turn-right"></i></span>
+          </div>
+          <div class="groupcourse">
+            <div class="itemscourse" *ngFor="let course of combinedcourse.courses">
+              <div class="relative">
+                <img class="imgcourse " src="{{course.image_url}}" alt="">
+                <div class="textlearn">
+                  <span class="learnnow bg-white text-black text-xl font-bold text-white rounded-xl px-5 py-2 border-2">Học ngay</span>
+                </div>
+              </div>
+              <p class="titlecourse">{{course.title}}</p>
+              <span class="userquantity"><i class="text-xl mr-2 fa-solid fa-people-line"></i>68.013</span>
+            </div>
+          </div>
+      </div>
+        <!--<div class="groupcourseresponsive">
+          <ng-image-slider #nav
+                           [images]="imageObject"
+                           [infinite]="false"
+                           [autoSlide]="1"
+                           [imageSize]="{width: '80%', height: 180}"
+                           slideImage="1">
+          </ng-image-slider>
+        </div>
+
+      </div>-->
+      <!--be-->
+
+      <div class="footer">
+        <div class="about grid lg:grid-cols-4 gap-5 ">
+          <div class="items-about">
+            <span class="title-about">
+              <img class="w-10" src="/assets/img/logo.png" alt="">
+              <span class="ml-2">Học Lập Trình Để Đi Làm</span>
+            </span>
+            <p class="info-about">Điện thoại: 0246.329.1102</p>
+            <p class="info-about">Email: contact@fullstack.edu.vn</p>
+            <p class="info-about">Địa chỉ: Nhà D9, lô A10, Nam</p>
+            <p class="info-about">Trung Yên, Trung Hòa, Cầu Giấy, Hà Nội</p>
+            <img class="mt-5" src="/assets/img/dmca.png" alt="">
+          </div>
+          <div class="items-about">
+            <span class="title-about">
+              <img class="w-10" src="/assets/img/logo.png" alt="">
+              <span class="">Về F8</span>
+            </span>
+            <p class="info-about">Giới thiệu</p>
+            <p class="info-about">Cơ hội việc làm</p>
+            <p class="info-about">Đối tác</p>
+          </div>
+          <div class="items-about">
+            <span class="title-about">
+              <img class="w-10" src="/assets/img/logo.png" alt="">
+              <span class="">HỖ TRỢ</span>
+            </span>
+            <p class="info-about">Liên hệ</p>
+            <p class="info-about">Bảo mật</p>
+            <p class="info-about">Điều khoản</p>
+          </div>
+          <div class="items-about">
+            <span class="title-about">
+              <img class="w-10" src="/assets/img/logo.png" alt="">
+              <span class="">CÔNG TY CỔ PHẦN CÔNG NGHỆ GIÁO DỤC F8</span>
+            </span>
+            <p class="info-about">Mã số thuế: 0109922901</p>
+            <p class="info-about">Ngày thành lập: 04/03/2022</p>
+            <p class="info-about">Lĩnh vực: Công nghệ, giáo dục, lập trình. F8 xây dựng và phát triển những sản phẩm mạng lại giá trị cho cộng đồng.</p>
+          </div>
+        </div>
+          <div class="infosocial ">
+            <p class="copyright">© 2018 - 2022 F8. All rights reserved.</p>
+            <div class="social">
+              <a href=""><i class="socialicon text-red-500 fa-brands fa-youtube"></i></a>
+              <a href=""><i class="socialicon text-blue-500 fa-brands fa-facebook"></i></a>
+              <a href=""><i class="socialicon text-white fa-brands fa-tiktok"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

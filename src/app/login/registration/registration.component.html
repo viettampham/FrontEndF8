@@ -1,0 +1,20 @@
+<div class="layout-page">
+  <div class="loginform">
+    <img src="./assets/img/logo.png" alt="" class="logo">
+    <p class="textlogin">Chào mừng đến với F8</p>
+    <form action="" class="login-ip" [formGroup]="RegistrationGroup" (ngSubmit)="submit()">
+      <input class="ip-info" type="text" placeholder=" Enter your email" formControlName="username">
+      <input class="ip-info" type="password" placeholder="Enter your password" formControlName="password">
+      <input class="ip-info" type="password" placeholder="Enter your password again" formControlName="verifypassword">
+      <button class="btnlog">Đăng ký</button>
+    </form>
+    <div class="w-full flex flex-row justify-between items-center">
+      <div class="bg-black" style="width: 30%;height: 1px"></div>
+      <p class="or">Hoặc tiếp tục với</p>
+      <div class="bg-black" style="width: 30%;height: 1px"></div>
+  </div>
+    <p class="text-notice">Bạn đã có tài khoản.
+      <a class="a-registration" [routerLink]="['']" routerLinkActive="$router_link-active$">Đăng nhập</a>
+    </p>
+</div>
+</div>

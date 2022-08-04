@@ -1,0 +1,36 @@
+.layout-page{
+  @apply h-screen w-full flex;
+  background: url("https://accounts.fullstack.edu.vn/static/media/f8_bg_auth_1920.b517075e98f3051de678.png") top center / cover no-repeat;
+  .loginform{
+    margin: auto;
+    @apply bg-white rounded-3xl p-10 flex flex-col justify-between items-center;
+    width: 640px;
+    min-height: 600px;
+
+    .logo{
+      @apply w-10 h-10;
+    }
+    .textlogin{
+      @apply text-3xl font-bold my-8;
+    }
+    .login-ip{
+      @apply w-full flex flex-col justify-center items-center;
+      .ip-info{
+        @apply w-5/6 border-2 rounded-full text-xl p-2 my-3;
+      }
+      .btnlog{
+        @apply text-base bg-white border-2 rounded-full px-8 py-3 hover:bg-black hover:text-white;
+      }
+    }
+    .or{
+      @apply text-xl text-red-400;
+    }
+
+    .text-notice{
+      @apply text-xl;
+      .a-registration{
+        @apply text-red-400;
+      }
+    }
+  }
+}
